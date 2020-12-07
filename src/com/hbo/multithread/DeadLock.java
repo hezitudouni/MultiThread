@@ -10,7 +10,7 @@ package com.hbo.multithread;
 public class DeadLock {
 
     public static void  main(String[] args){
-        //Thread.sleep使当前线程放弃cpu的执行权以保证下一个线程可以获取到cpu的执行权，进入死锁状态
+        //Thread.sleep使当前线程放弃cpu的执行权,但是不释放锁。保证下一个线程可以获取到cpu的执行权，进入死锁状态
         //调试的工具有 1.jps搭配jstack 2.jvisualvm.exe 3.jconsole
 
         Object o1 = new Object();
